@@ -11,10 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
-      - name: Install pnpm
-        uses: pnpm/action-setup@v6
-        with:
-          cache: true
+      - uses: pnpm/action-setup@master
       - name: Install dependencies
         run: pnpm --version && pnpm install --frozen-lockfile
       - name: Build

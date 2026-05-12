@@ -6,16 +6,9 @@
   "scripts": {
     "build": "pnpm --version"
   },
+  "packageManager": "pnpm@11.1.0",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "devEngines": {
-    "packageManager": {
-      "name": "pnpm",
-      "version": "^11.1.0",
-      "onFail": "download"
-    }
-  },
   "type": "module",
   "devDependencies": {
     "typescript": "^6.0.3"
