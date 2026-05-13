@@ -12,6 +12,9 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
       - uses: pnpm/action-setup@master
+      - name: Run install Git's default auto-crlf line endings
+        run: |
+          pnpm install --frozen-lockfile || true
       - name: Run install with CRLF line endings
         run: |
           $content = Get-Content pnpm-lock.yaml -Raw
