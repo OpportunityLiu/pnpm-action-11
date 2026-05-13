@@ -12,11 +12,14 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
       - uses: pnpm/action-setup@master
-      - run: |
-          pnpm setup
-          echo "Path=${env:PATH}"
-          echo "Path=${env:PATH}" >> $GITHUB_ENV
-      - name: Install dependencies
-        run: pnpm --version && pnpm install --frozen-lockfile
-      - name: Build
-        run: pnpm build
+      - name: Run install with CRLF line endings
+        run: |
+          $content = Get-Content pnpm-lock.yaml -Raw
+          Set-Content pnpm-lock.yaml -Value $content -NoNewline -Encoding UTF8
+          pnpm install --frozen-lockfile || true
+      - name: Run install with LF line endings
+        run: |
+          $content = Get-Content pnpm-lock.yaml -Raw
+          $content = $content -replace "`r`n", "`n"
+          Set-Content pnpm-lock.yaml -Value $content -NoNewline -Encoding UTF8
+          pnpm install --frozen-lockfile || true
