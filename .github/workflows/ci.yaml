@@ -6,12 +6,19 @@ on:
 
 jobs:
   build:
+    strategy:
+      fail-fast: false
+      matrix:
+        pnpm-version: [10, 11]
+
     runs-on: windows-latest
 
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
       - uses: pnpm/action-setup@master
+        with:
+          version: ${{ matrix.pnpm-version }}
       - name: Run install Git's default auto-crlf line endings
         run: |
           pnpm install --frozen-lockfile || true
