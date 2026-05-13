@@ -6,7 +6,7 @@
   "scripts": {
     "build": "pnpm --version"
   },
-  "packageManager": "pnpm@11.1.0",
+  "packageManager": "pnpm@11.1.1",
   "keywords": [],
   "author": "",
   "type": "module",
