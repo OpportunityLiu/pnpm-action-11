@@ -19,49 +19,7 @@ snapshots:
   '@pnpm/plugin-better-defaults@0.3.0': {}
 
 ---
----
-lockfileVersion: "9.0"
-
-importers:
-  .:
-    configDependencies:
-      "@pnpm/plugin-better-defaults":
-        specifier: 0.3.0
-        version: 0.3.0
-
-packages:
-  "@pnpm/plugin-better-defaults@0.3.0":
-    resolution:
-      {
-        integrity: sha512-J500v1tfdFlKXkvO0ivkwJlrTiKNa+2Yb6aX01719FPnH2fGuf9we0ObZRB3OoTetWEChLudHglNDYl7Z3+mLQ==,
-      }
-
-snapshots:
-  "@pnpm/plugin-better-defaults@0.3.0": {}
-
----
----
-lockfileVersion: "9.0"
-
-importers:
-  .:
-    configDependencies:
-      "@pnpm/plugin-better-defaults":
-        specifier: 0.3.0
-        version: 0.3.0
-
-packages:
-  "@pnpm/plugin-better-defaults@0.3.0":
-    resolution:
-      {
-        integrity: sha512-J500v1tfdFlKXkvO0ivkwJlrTiKNa+2Yb6aX01719FPnH2fGuf9we0ObZRB3OoTetWEChLudHglNDYl7Z3+mLQ==,
-      }
-
-snapshots:
-  "@pnpm/plugin-better-defaults@0.3.0": {}
-
----
-lockfileVersion: "9.0"
+lockfileVersion: '9.0'
 
 settings:
   autoInstallPeers: true
@@ -70,6 +28,7 @@ settings:
 pnpmfileChecksum: sha256-IV/a5nDtApptjchVFShjgy2zhastShRIn1UdoiAUEIA=
 
 importers:
+
   .:
     devDependencies:
       typescript:
@@ -77,13 +36,12 @@ importers:
         version: 6.0.3
 
 packages:
+
   typescript@6.0.3:
-    resolution:
-      {
-        integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==,
-      }
-    engines: { node: ">=14.17" }
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
+    engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
+
   typescript@6.0.3: {}
