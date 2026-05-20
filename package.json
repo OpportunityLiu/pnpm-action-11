@@ -10,6 +10,10 @@
   "author": "",
   "type": "module",
   "devDependencies": {
-    "typescript": "^6.0.3"
+    "monaco-editor": "0.55.1",
+    "monaco-markdown": "^0.0.12"
+  },
+  "resolutions": {
+    "monaco-editor": "0.55.1"
   }
 }
